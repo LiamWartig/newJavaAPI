@@ -21,7 +21,7 @@ public class UserController {
 	@Autowired
 	private UserRepository userRepository;
 	
-	@RequestMapping (value = "getUser/{id}", method = RequestMethod.GET)
+	@RequestMapping (value = "getUser/{uId}", method = RequestMethod.GET)
 	public User retrieve(@PathVariable Long uId) {
 		return userRepository.findByuId(uId);
 	}
@@ -37,7 +37,7 @@ public class UserController {
 		return "user added";
 	}
 		
-	@RequestMapping (value = "updateUser/{identifier}", method = RequestMethod.PUT)
+	@RequestMapping (value = "updateUser/{uId}", method = RequestMethod.PUT)
 	public String updateUser(@RequestBody User newUser, @PathVariable Long uId) {
 		User user = userRepository.findByuId(uId);
         BeanUtils.copyProperties(user, newUser);
