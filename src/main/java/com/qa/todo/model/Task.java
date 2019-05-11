@@ -7,34 +7,43 @@ import javax.persistence.Id;
 public class Task {
 
 	@Id
-	private String identifier;
-	private String text;
+	private Long tId;
+	private String statement;
+	private Long uId;
 	
 	public Task () {
 		
 	}
 	
-	public Task(String identifier, String text) {
-		this.identifier = identifier;
-		this.text = text;
+	public Task(Long tId, String statement, Long uId) {
+		this.tId = tId;
+		this.statement = statement;
+		this.uId=uId;
 	}
 
-	public String getIdentifier() {
-		return identifier;
+	public Long gettId() {
+		return tId;
 	}
 
-	public void setIdentifier(String identifier) {
-		this.identifier = identifier;
+	public void settId(Long tId) {
+		this.tId = tId;
 	}
 
-	public String getText() {
-		return text;
+	public String getStatement() {
+		return statement;
 	}
 
-	public void setText(String text) {
-		this.text = text;
+	public void setStatement(String statement) {
+		this.statement = statement;
 	}
 	
-	
+	public Long getuId() {
+		return uId;
+	}
+
+	public void setuId(Long uId) {
+		this.uId = uId;
+	}
+
 	
 }

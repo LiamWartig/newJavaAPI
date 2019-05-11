@@ -7,48 +7,40 @@ import javax.persistence.Id;
 public class User {
 
 	@Id
+	private Long uId;
 	private String username;
-	private String hashPassword;
-	private String authToken;
-	
+	private String password;
+
 	public User () {
-		
-	}
-	
-	public User (String username, String hashPassword) {
-		this.username = username;
-		this.hashPassword = hashPassword;
 	}
 
-	public User(String username, String hashPassword, String authToken) {
-		super();
+	public User(String username, String password) {
 		this.username = username;
-		this.hashPassword = hashPassword;
-		this.authToken = authToken;
+		this.password = password;
 	}
 
-	public String getusername() {
+	public String getUsername() {
 		return username;
 	}
 
-	public void setusername(String username) {
+	public void setUsername(String username) {
 		this.username = username;
 	}
 
-	public String getHashPassword() {
-		return hashPassword;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setHashPassword(String hashPassword) {
-		this.hashPassword = hashPassword;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public String getAuth() {
-		return authToken;
+	public Long getuId() {
+		return uId;
 	}
-
-	public void setAuth(String authToken) {
-		this.authToken = authToken;
+	
+	public void setuId(Long uId) {
+		this.uId=uId;
 	}
 	
 	
